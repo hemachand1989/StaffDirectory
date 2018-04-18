@@ -1,0 +1,55 @@
+{
+    "staffDirectoryId": 1,
+    "role": "SoftwareArchitect",
+    "apprecitations": 0,
+    "reporteeList": [
+        {
+            "staffDirectoryId": 2,
+            "role": "Developer",
+            "apprecitations": 0,
+            "reporteeList": null,
+            "id": 4,
+            "name": "Steve",
+            "officeNumber": "804535345",
+            "mobileNumber": "12342345533",
+            "emailId": "steve@uts.com",
+            "createdDate": "2018-04-18T20:46:45.4385583",
+            "updatedDate": "2018-04-18T20:46:45.4388291"
+        }
+    ],
+    "reporter": {
+        "staffDirectoryId": null,
+        "role": "Manager",
+        "apprecitations": 0,
+        "reporteeList": [
+            {
+                "staffDirectoryId": 1,
+                "role": "QualityAnalyst",
+                "apprecitations": 0,
+                "reporteeList": null,
+                "id": 3,
+                "name": "PaulJones",
+                "officeNumber": "804535345",
+                "mobileNumber": "12342345533",
+                "emailId": "paul.jones@uts.com",
+                "createdDate": "2018-04-18T13:45:14.1228948",
+                "updatedDate": "2018-04-18T13:45:14.1229069"
+            }
+        ],
+        "reporter": null,
+        "id": 1,
+        "name": "JohnWilliams",
+        "officeNumber": "1234234234",
+        "mobileNumber": "5324234233",
+        "emailId": "john.williams@uts.com",
+        "createdDate": "2018-04-18T13:42:18.8780996",
+        "updatedDate": "2018-04-18T13:42:18.8783223"
+    },
+    "id": 2,
+    "name": "HemParuchuri",
+    "officeNumber": "62423424",
+    "mobileNumber": "7643635453",
+    "emailId": "hem.paruchuri@uts.com",
+    "createdDate": "2018-04-18T13:43:09.6008846",
+    "updatedDate": "2018-04-18T13:43:09.6008949"
+}

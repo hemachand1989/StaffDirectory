@@ -1,0 +1,42 @@
+http://localhost:5000/api/staff
+
+Set Header 
+
+Content-Type : application/json and post the below one by one 
+
+{
+ name : 'JohnWilliams',
+ officeNumber:'1234234234',
+ mobileNumber: '5324234233',
+ emailId:'john.williams@uts.com',
+ role:0,
+}
+
+{
+ name : 'HemParuchuri',
+ officeNumber:'62423424',
+ mobileNumber: '7643635453',
+ emailId:'hem.paruchuri@uts.com',
+ role:1,
+ staffDirectoryId:1
+}
+
+
+{
+ name : 'PaulJones',
+ officeNumber:'804535345',
+ mobileNumber: '12342345533',
+ emailId:'paul.jones@uts.com',
+ role:2,
+ staffDirectoryId:1
+}
+
+
+{
+ name : 'Steve',
+ officeNumber:'804535345',
+ mobileNumber: '12342345533',
+ emailId:'steve@uts.com',
+ role:3,
+ staffDirectoryId:2
+}
