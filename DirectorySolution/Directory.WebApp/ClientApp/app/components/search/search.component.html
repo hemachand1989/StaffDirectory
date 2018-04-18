@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+</head>
+<body>
+    <div *ngIf="isSearchSuccess">
+        <div class="col-sm-7">
+            <div>
+                <img src="../../../../Assets/Images/User_Pic.png" alt="No Photo" class="img-thumbnail">
+            </div>
+            <div class="row top-buffer-20">
+                <div class="col-sm-4 col-xs-12">
+                    <div>
+                        <div class="bold font-size-30">{{model.name}}</div>
+                        <div class="bold font-size-14">{{model.role}}</div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <div class="row no-space text-xs-center">
+                        <div class="col-xs-4">
+                            <div class="counter counter-inverse">
+                                <button type="button" class="btn btn-outline btn-default btn-xs">
+                                    <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
+                                    <span>{{model.apprecitations}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-space text-xs-center">
+                        <div class="col-xs-4">
+                            <div class="counter counter-inverse">
+                                <button type="button" (click)="updateLikes()" class="btn btn-outline btn-default btn-xs bg-cornflowerblue text-white">
+                                    <i class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></i>
+                                    <span>Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="top-buffer-20 table table-striped table-width">
+                <tbody>
+                    <tr *ngIf="model.reporter">
+                        <td class="capital">Manager</td>
+                        <td>
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>{{model.reporter.name}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="capital">Office Phone</td>
+                        <td>
+                            <i class="glyphicon glyphicon-home"></i>
+                            <span>{{model.officeNumber}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="capital">cell phone</td>
+                        <td>
+                            <i class="glyphicon glyphicon-headphones"></i>
+                            <span>{{model.mobileNumber}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="capital">email</td>
+                        <td>
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <span>{{model.emailId}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-sm-5">
+            <div style="width:80%" class="panel panel-default">
+                <div class="panel-heading">DirectReports</div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li style="cursor:pointer" class="list-group-item" (click)="fetchDetails(reporter)" *ngFor="let reporter of model.reporteeList">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="avatar avatar-online">
+                                        <img width="40px" height="40px" src="../../../../Assets/Images/Reportee_Image.png" alt="">
+                                        <i></i>
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="list-group-item-heading">
+                                        <small class="pull-xs-right">{{reporter.name}}</small>
+                                    </h5>
+                                    <p class="list-group-item-text">{{reporter.role}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!isSearchSuccess">
+        <h3>Sorry there are no results for this Search.</h3>
+    </div>
+</body>
+</html>
